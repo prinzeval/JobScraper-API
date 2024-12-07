@@ -5,3 +5,4 @@ beautifulsoup4
 webdriver-manager
 pandas
 supabase
+html5lib

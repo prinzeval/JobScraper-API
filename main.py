@@ -1,26 +1,4 @@
-# from fastapi import FastAPI, HTTPException
-# from models.job_search import JobSearch
-# from utils.driver import initialize_driver
-# from scraping.job_links import scrape_job_links
-# from scraping.job_details import scrape_job_details
-# from utils.csv_handler import save_to_csv
-# from supabase.uploader import upload_to_supabase
 
-# app = FastAPI()
-
-# @app.post("/search_jobs")
-# def search_jobs(job: JobSearch):
-#     driver = initialize_driver()
-#     try:
-#         job_links = scrape_job_links(driver, job.job_title, job.location)
-#         job_details = scrape_job_details(driver, job_links)
-#         file_path = save_to_csv(job_details, 'output.csv')
-#         uploaded_data = upload_to_supabase(file_path)
-#         return {"uploaded_data": uploaded_data}
-#     except Exception as e:
-#         raise HTTPException(status_code=500, detail=str(e))
-#     finally:
-#         driver.quit()
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from time import sleep

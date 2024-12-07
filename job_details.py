@@ -12,6 +12,7 @@ import time
 from selenium.webdriver.support.ui import WebDriverWait 
 from selenium.webdriver.support import expected_conditions as EC
 import pandas as pd
+import html5lib
 
 def get_job_links(job_title, location):
     formatted_job_title = job_title.replace(' ', '+')
@@ -53,7 +54,7 @@ def extract_job_details(job_title, location, file_path):
         driver.get(lines)
         sleep(2)
         html_content = driver.page_source
-        sharksoup = BeautifulSoup(html_content, 'html.parser')
+        sharksoup = BeautifulSoup(html_content, 'html5lib')
         
         linkz = sharksoup.find('div', {'class': 'jobsearch-InfoHeaderContainer jobsearch-DesktopStickyContainer css-zt53js eu4oa1w0'})
         position = linkz.find('h1').text.strip() if linkz and linkz.find('h1') else "NULL"
