@@ -149,8 +149,10 @@ def search_jobs(job: JobSearch):
         raise HTTPException(status_code=500, detail=str(e))
     finally:
         driver.quit()
-
+        
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8004)
-# Run the FastAPI app with: uvicorn script_name:app --reload
+    import os
+    port = int(os.getenv("PORT", 8000))  # Default to 8000 if PORT is not set
+    uvicorn.run(app, host="0.0.0.0", port=port)
+
 
