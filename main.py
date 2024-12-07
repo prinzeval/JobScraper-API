@@ -151,6 +151,6 @@ def search_jobs(job: JobSearch):
         driver.quit()
 
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8004)
 # Run the FastAPI app with: uvicorn script_name:app --reload
 
