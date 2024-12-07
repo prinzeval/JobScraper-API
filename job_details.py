@@ -140,8 +140,3 @@ def extract_job_details(job_title, location, file_path):
     daf.to_csv(file_path, index=False)
     print("DataFrame successfully saved to CSV file.")
 
-# Example usage:
-job_title = input("Enter the job title you're looking for (e.g., 'data analyst entry level'): ")
-location = input("Enter the job location (e.g., 'Remote' or 'New York'): ")
-file_path = r'C:\Users\valen\Desktop\JOB-WEBSITE\output.csv'
-extract_job_details(job_title, location, file_path)
