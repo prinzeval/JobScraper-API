@@ -177,7 +177,7 @@ docker run -p 8000:8000 job_scraper
 - Optimize scraping logic to handle large-scale data efficiently.
 
 ## Author
-[Your Name] - [Your Email]
+Valentine - valentineallpowers@gmail.com
 
 ## License
 This project is licensed under the MIT License.
